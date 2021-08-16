@@ -1,17 +1,20 @@
 <template>
   <div>
     <h1> Rick And Morty </h1>
-    <listCharacters/>
+    <FilterByStatus/>
+    <ListCharacters/>
     </div>
 </template>
 
 <script>
 
-import listCharacters from '@/components/ListCharacters'
+import ListCharacters from '@/components/ListCharacters'
+import FilterByStatus from '@/components/FilterByStatus'
 export default {
   name: 'App',
   components: {
-    listCharacters
+    ListCharacters,
+    FilterByStatus
     
   }
 }
@@ -20,8 +23,8 @@ export default {
 <style lang="scss">
   
   :root{
-    --backgroung-body: #24282f;
-    --backgroud-card: #3c3e44;
+    --background-body: #24282f;
+    --background-card: #4f5053;
     --text-white: #ffffff;
     --text-agray: #c0c0c0;
     --text-orange: #ff9800;
@@ -33,7 +36,7 @@ export default {
 
   }
   body{
-    background-color: var(--backgroung-body);
+    background-color: var(--background-body);
     color: var(--text-white);
   }
 </style>

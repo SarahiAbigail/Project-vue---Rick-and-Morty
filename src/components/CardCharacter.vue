@@ -1,6 +1,6 @@
 <template>
     <div class="character">
-        <img :src="character.img" :alt="character.name">
+        <img :src="character.image" :alt="character.name">
         <div class="character__info"> 
             <h3> {{character.name}} </h3>
             <div class="status">
@@ -47,7 +47,7 @@
       }
     }
   span{
-    color: var(--text-gray);
+    color: var(--text-agray);
   }
   h3{
     margin-bottom: 0.5rem;
@@ -60,7 +60,7 @@
       align-items: center;
       margin-bottom: 0.5rem;
       span{
-        color: var(--text-gray);
+        color: var(--text-agray);
         &:first-child{
           width: 10px;
           height: 10px;
@@ -68,13 +68,13 @@
           margin-right: 0.5rem;
         }
       }
-      .alive{
+      .Alive{
         background-color: green;
       }
-      .dead{
+      .Dead{
         background-color: red;
       }
-      .default{
+      .Default{
         background-color: white;
       }
       .origin{
