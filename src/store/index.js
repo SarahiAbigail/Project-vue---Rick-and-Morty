@@ -29,6 +29,17 @@ export default createStore({
         return character.status.includes(status)
       })
       commit('setCharactersFilters', results)
+    },
+    filterByName({commit, state}, name){
+      const formatName = name.toLowerCase()
+      const results = state.characters.filter((character)=>{
+        const characterName = character.name.toLowerCase()
+
+        if(characterName.includes(formatName)){
+          return character
+        }
+      })
+      commit('setCharactersFilters', results)
     }
   },
   modules: {
