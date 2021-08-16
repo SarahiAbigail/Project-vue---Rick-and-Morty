@@ -3,12 +3,12 @@
         <img :src="character.image" :alt="character.name">
         <div class="character__info"> 
             <h3> {{character.name}} </h3>
-            <div class="status">
-                <span>{{character.status}} - {{character.species}}</span>
+            <div class="status"> 
                 <span
                 :class="character.status== 'Alive' ? 'alive':
                 character.status=='Dead' ? 'dead':
                 'default'"></span>
+                <span>{{character.status}} - {{character.species}}</span>
             </div>
             <div class="origin">
                 <span>
@@ -33,13 +33,13 @@
 <style lang="scss">
 .character{
     background-color: var(--background-card);
-    border-radius: 20px;
-    box-shadow: 0 0 1px var(--background-body);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 1px var(--background-body);
     overflow: hidden;
     cursor: pointer;
     transition: transform 200ms ease-in-out;
     height: 100%;
-    &:-moz-full-screen{
+    &:hover{
       transform: scale(1.05);
       h3{
         color: var(--text-orange);
@@ -53,7 +53,7 @@
     margin-bottom: 0.5rem;
   }
 
-  &:__info{
+  &__info{
     padding: 1.5rem;
     .status{
       display: flex;
@@ -62,25 +62,26 @@
       span{
         color: var(--text-agray);
         &:first-child{
-          width: 10px;
-          height: 10px;
-          border-radius: 5px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
           margin-right: 0.5rem;
         }
       }
-      .Alive{
+      .alive{
         background-color: green;
       }
-      .Dead{
+      .dead{
         background-color: red;
       }
-      .Default{
+      .default{
         background-color: white;
       }
-      .origin{
+      
+    }
+    .origin{
         margin-bottom: 0.5rem;
       }
-    }
   }
 }
 

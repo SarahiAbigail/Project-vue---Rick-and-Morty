@@ -42,5 +42,19 @@ export default {
   body{
     background-color: var(--background-body);
     color: var(--text-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  h1{
+    margin-bottom: 3rem;
+    text-align: center;
+
+  }
+  .container{
+    width: 980px;
+    max-width: 90%;
+    margin: 5rem auto;
+  }
+  img{
+    width: 100%;
   }
 </style>
